@@ -1,3 +1,4 @@
+import 'package:doctor_app/screen/auth/register_screen.dart';
 import 'package:doctor_app/screen/main/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -104,7 +105,27 @@ class _LoginScreenState extends State<LoginScreen> {
                         }),
                       ),
                     ),
-                    const SizedBox(height: 30),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const Text("Already have an account?"),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamedAndRemoveUntil(context,
+                                  RegisterScreen.routeName, (route) => false);
+                            },
+                            child: const Text(
+                              "Log in",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 10),
