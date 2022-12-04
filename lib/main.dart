@@ -1,3 +1,4 @@
+import 'package:doctor_app/router.dart';
 import 'package:doctor_app/screen/auth/login_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const LoginScreen(),
+      onGenerateRoute: (settings) => generateRoute(settings),
     );
   }
 }
