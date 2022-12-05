@@ -61,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         validator: ((value) {
                           if (value == null || value.isEmpty) {
                             return 'Ovo polje ne moze biti prazno!';
-                          } else if (value != "career@tech397.com") {
+                          } else if (value != "career@tech387.com") {
                             return 'Pogrešan email';
                           }
                           return null;
